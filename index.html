@@ -9,121 +9,160 @@
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/fotorama-4.6.4.min.js"></script>
+    <script src="js/jquery.smooth-scroll.min.js"></script>
+    <script src="js/animatedModal.min.js"></script>
     <script src="js/parallax.min.js"></script>
 
     <script>
         $(function() {
-            $('.fotorama').fotorama({
+            var windowHeight = $(window).height();
+            var headerBg = $('.js-header-bg');
+            var logo = $('.js-logo');
+            var fotorama = $('.fotorama');
+            var landing = $('.js-landing');
+            var carousel = $('.js-carousel');
+
+            $('.parallax-box').parallax({imageSrc: 'img/earth-bg.png'});
+
+            headerBg.hide();
+            landing.hide();
+
+            carousel.css({'height': windowHeight});
+
+            fotorama.on('fotorama:load', function () {
+                landing.show();
+                carousel.css({'height': 'auto'});
+            });
+
+            // Smooth scroll by clicking logo
+            logo.on('click', function() {
+                $.smoothScroll({
+                    speed: 800
+                });
+                return false;
+            });
+
+
+            // Header fade
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    headerBg.fadeIn();
+                } else {
+                    headerBg.fadeOut();
+                }
+            });
+
+            fotorama.fotorama({
                 width: '100%',
                 transition: 'crossfade',
-                hash: true,
                 loop: true,
                 keyboard: true,
                 spinner: {
-                    lines: 13,
-                    length: 15,
-                    radius: 35,
+                    lines: 10,
+                    length: 10,
+                    radius: 10,
                     color: '#fff'
                 }
             });
+
+            $('.js-login').animatedModal();
         });
     </script>
 </head>
 
 <body>
-    <section class="evasion">
-        <div class="evasion__carousel">
-            <div class="fotorama">
-                <img src="img/danang.jpg" alt=""/>
-                <img src="img/cambrian.jpg" alt=""/>
-                <img src="img/siam.jpg" alt=""/>
-            </div>
-        </div>
-
-        <div class="evasion__login">
-            <a href="#" class="btn btn_small">Login</a>
-        </div>
-
-        <div class="evasion__welcome">
-            <div class="evasion__box">
+    <header class="header">
+        <div class="header__in">
+            <a href="#" class="logo js-logo">
                 <img src="img/evasion-logo.png" alt="Evasion logo"/>
-            </div>
+            </a>
 
-            <div class="evasion__intro">
-                <h1 class="title title_white">
-                    <span class="title__row">전 세계 엄선된 호텔들을</span>
-                    <span class="title__row">합리적인 가격으로 만나보세요</span>
-                </h1>
-            </div>
-
-            <div class="evasion__actions">
-                <div class="actions">
-                    <a href="#" class="btn btn_pink">무료 회원 가입</a>
-                    <a href="#" class="btn btn_gray">페이스북으로 가입</a>
-                </div>
+            <div class="login">
+                <a href="#animatedModal" class="js-login btn btn_small">Login</a>
             </div>
         </div>
+        <div class="header__bg js-header-bg"></div>
+    </header>
 
+    <div class="carousel js-carousel">
+        <div class="fotorama">
+            <img src="img/danang.jpg" alt=""/>
+            <img src="img/cambrian.jpg" alt=""/>
+            <img src="img/siam.jpg" alt=""/>
+        </div>
+    </div>
 
-        <div class="evasion__about">
-            <div class="parallax-box"
-                 data-parallax="scroll"
-                 data-image-src="img/earth-bg.png">
-                <div class="box">
-                    <header class="box__head">
-                        <h1 class="title title_gill">About ÉVASION</h1>
-                        <p class="info">
-                            에바종은 전세계의 럭셔리 리조트와 디자인 부티크 호텔만을 엄선하여
-                            회원들에게 특별한 프로모션으로 제공하는 회원제 호텔 예약 서비스입니다.
-                        </p>
-                    </header>
+    <div class="welcome">
+        <div class="intro">
+            <h1 class="title title_white">
+                <span class="title__row">전 세계 엄선된 호텔들을</span>
+                <span class="title__row">합리적인 가격으로 만나보세요</span>
+            </h1>
+        </div>
 
-                    <ul class="box__list">
-                        <li class="box__col box__col_centered">
-                            <div class="about">
-                                <div class="about__img-box">
-                                    <div class="about__img">
-                                        <i class="icon icon_building"></i>
-                                    </div>
+        <div class="actions">
+            <a href="#" class="btn btn_pink">무료 회원 가입</a>
+            <a href="#" class="btn btn_gray">페이스북으로 가입</a>
+        </div>
+    </div>
+
+    <section class="evasion js-landing">
+
+        <div class="parallax-box" data-image-src="img/earth-bg.png">
+            <div class="box">
+                <header class="box__head">
+                    <h1 class="title title_gill">About ÉVASION</h1>
+                    <p class="info">
+                        에바종은 전세계의 럭셔리 리조트와 디자인 부티크 호텔만을 엄선하여
+                        회원들에게 특별한 프로모션으로 제공하는 회원제 호텔 예약 서비스입니다.
+                    </p>
+                </header>
+
+                <ul class="box__list">
+                    <li class="box__col box__col_centered">
+                        <div class="about">
+                            <div class="about__img-box">
+                                <div class="about__img">
+                                    <i class="icon icon_building"></i>
                                 </div>
-                                <h4 class="about__name">Luxury Hotel</h4>
-                                <p class="about__info">
-                                    에바종 회원만을 위한 전 세계
-                                    럭셔리 리조트 및 부티크 호텔 엄선
-                                </p>
                             </div>
-                        </li>
-                        <li class="box__col box__col_centered">
-                            <div class="about">
-                                <div class="about__img-box">
-                                    <div class="about__img">
-                                        <i class="icon icon_quality"></i>
-                                    </div>
+                            <h4 class="about__name">Luxury Hotel</h4>
+                            <p class="about__info">
+                                에바종 회원만을 위한 전 세계
+                                럭셔리 리조트 및 부티크 호텔 엄선
+                            </p>
+                        </div>
+                    </li>
+                    <li class="box__col box__col_centered">
+                        <div class="about">
+                            <div class="about__img-box">
+                                <div class="about__img">
+                                    <i class="icon icon_quality"></i>
                                 </div>
-                                <h4 class="about__name">HigH Quality</h4>
-                                <p class="about__info">
-                                    에바종 여행팀과 회원들이 함께 만들어가는
-                                    신뢰있는 리뷰와 취향별 호텔 정보
-                                </p>
                             </div>
-                        </li>
-                        <li class="box__col box__col_centered">
-                            <div class="about">
-                                <div class="about__img-box">
-                                    <div class="about__img">
-                                        <i class="icon icon_price"></i>
-                                    </div>
+                            <h4 class="about__name">HigH Quality</h4>
+                            <p class="about__info">
+                                에바종 여행팀과 회원들이 함께 만들어가는
+                                신뢰있는 리뷰와 취향별 호텔 정보
+                            </p>
+                        </div>
+                    </li>
+                    <li class="box__col box__col_centered">
+                        <div class="about">
+                            <div class="about__img-box">
+                                <div class="about__img">
+                                    <i class="icon icon_price"></i>
                                 </div>
-                                <h4 class="about__name">Reasonable Price</h4>
-                                <p class="about__info">
-                                    에바종 회원만을 위한
-                                    합리적인 할인 가격 및 부가 서비스
-                                </p>
                             </div>
-                        </li>
-                    </ul><!-- .box__list -->
-                </div><!-- .box -->
-            </div><!-- .parallax-box -->
+                            <h4 class="about__name">Reasonable Price</h4>
+                            <p class="about__info">
+                                에바종 회원만을 위한
+                                합리적인 할인 가격 및 부가 서비스
+                            </p>
+                        </div>
+                    </li>
+                </ul><!-- .box__list -->
+            </div><!-- .box -->
         </div><!-- .evasion__about -->
 
         <div class="container">
@@ -286,7 +325,7 @@
             </div><!-- .box -->
         </div><!-- .container -->
 
-        <div class="box box_gray">
+        <div class="box parallax-box" data-image-src="img/earth-bg.png">
             <div class="container">
                 <header class="box__head">
                     <h1 class="title title_gill">Our members say</h1>
@@ -337,10 +376,10 @@
             <div class="evasion__actions">
                 <div class="actions">
                     <a href="#" class="btn btn_pink">무료 회원 가입</a>
-                    <a href="#" class="btn">페이스북으로 가입</a>
+                    <a href="#" class="btn btn_blue">페이스북으로 가입</a>
                 </div>
             </div>
-        </div><!-- .box box_gray -->
+        </div><!-- .box parallax-box -->
 
         <footer class="evasion__foot foot">
             <div class="container">
@@ -444,6 +483,55 @@
                 </div><!-- .foot__bottom -->
             </div><!-- .container -->
         </footer><!-- .evasion__foot foot -->
-    </section>
+    </section><!-- .evasion js-landing -->
+
+    <!-- Login popup -->
+    <div id="animatedModal" class="login-modal modal">
+        <div class="modal-content">
+            <div class="close-animatedModal">
+                <i class="icon icon_close"></i>
+            </div>
+
+            <span class="logo logo_top-null">
+                <img src="img/evasion-logo-dark.png" alt="Evasion logo"/>
+            </span>
+
+            <form action="" class="login-form">
+                <div class="input">
+                    <input type="email"
+                           class="input__el"
+                           placeholder="이메일"/>
+                </div>
+                <div class="input">
+                    <input type="password"
+                           class="input__el input__el_not-valid"
+                           placeholder="비밀번호를 입력하세요."/>
+                    <p class="input__error">This is input error example text</p>
+                </div>
+
+                <input type="submit" class="btn btn_blue btn_block" value="로그인">
+
+                <div class="login-form__opts">
+                    <label class="login-form__remember">
+                        <input type="checkbox"/>
+                        <span>로그인 상태 유지</span>
+                    </label>
+
+                    <a href="#" class="login-form__forgot-pass">아이디  |  비밀번호 찾기</a>
+                </div>
+
+                <p class="or-separator">
+                    <span class="or-separator__text">or</span>
+                    <i class="or-separator__line"></i>
+                </p>
+
+                <a href="#" class="btn btn_fb btn_block btn_icon">
+                    <i class="icon icon_fb-white"></i>
+                    <span>페이스북 로그인</span>
+                </a>
+            </form>
+        </div>
+    </div><!-- .login-modal modal -->
+    <!-- Login popup end -->
 </body>
 </html>
