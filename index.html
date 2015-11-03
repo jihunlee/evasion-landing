@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EVASION</title>
+
+    <link rel="shortcut icon" href="img/evasion.ico"/>
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/fotorama-4.6.4.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+
+    <script>
+        $(function() {
+            $('.fotorama').fotorama({
+                width: '100%',
+                transition: 'crossfade',
+                hash: true,
+                loop: true,
+                keyboard: true,
+                spinner: {
+                    lines: 13,
+                    length: 15,
+                    radius: 35,
+                    color: '#fff'
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <section class="evasion">
+        <div class="evasion__carousel">
+            <div class="fotorama">
+                <img src="img/danang.jpg" alt=""/>
+                <img src="img/cambrian.jpg" alt=""/>
+                <img src="img/siam.jpg" alt=""/>
+            </div>
+        </div>
+
+        <div class="evasion__login">
+            <a href="#" class="btn btn_small">Login</a>
+        </div>
+
+        <div class="evasion__welcome">
+            <div class="evasion__box">
+                <img src="img/evasion-logo.png" alt="Evasion logo"/>
+            </div>
+
+            <div class="evasion__intro">
+                <h1 class="title title_white">
+                    <span class="title__row">전 세계 엄선된 호텔들을</span>
+                    <span class="title__row">합리적인 가격으로 만나보세요</span>
+                </h1>
+            </div>
+
+            <div class="evasion__actions">
+                <div class="actions">
+                    <a href="#" class="btn btn_pink">무료 회원 가입</a>
+                    <a href="#" class="btn btn_gray">페이스북으로 가입</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="evasion__about">
+            <div class="parallax-box"
+                 data-parallax="scroll"
+                 data-image-src="img/earth-bg.png">
+                <div class="box">
+                    <header class="box__head">
+                        <h1 class="title title_gill">About ÉVASION</h1>
+                        <p class="info">
+                            에바종은 전세계의 럭셔리 리조트와 디자인 부티크 호텔만을 엄선하여
+                            회원들에게 특별한 프로모션으로 제공하는 회원제 호텔 예약 서비스입니다.
+                        </p>
+                    </header>
+
+                    <ul class="box__list">
+                        <li class="box__col box__col_centered">
+                            <div class="about">
+                                <div class="about__img-box">
+                                    <div class="about__img">
+                                        <i class="icon icon_building"></i>
+                                    </div>
+                                </div>
+                                <h4 class="about__name">Luxury Hotel</h4>
+                                <p class="about__info">
+                                    에바종 회원만을 위한 전 세계
+                                    럭셔리 리조트 및 부티크 호텔 엄선
+                                </p>
+                            </div>
+                        </li>
+                        <li class="box__col box__col_centered">
+                            <div class="about">
+                                <div class="about__img-box">
+                                    <div class="about__img">
+                                        <i class="icon icon_quality"></i>
+                                    </div>
+                                </div>
+                                <h4 class="about__name">HigH Quality</h4>
+                                <p class="about__info">
+                                    에바종 여행팀과 회원들이 함께 만들어가는
+                                    신뢰있는 리뷰와 취향별 호텔 정보
+                                </p>
+                            </div>
+                        </li>
+                        <li class="box__col box__col_centered">
+                            <div class="about">
+                                <div class="about__img-box">
+                                    <div class="about__img">
+                                        <i class="icon icon_price"></i>
+                                    </div>
+                                </div>
+                                <h4 class="about__name">Reasonable Price</h4>
+                                <p class="about__info">
+                                    에바종 회원만을 위한
+                                    합리적인 할인 가격 및 부가 서비스
+                                </p>
+                            </div>
+                        </li>
+                    </ul><!-- .box__list -->
+                </div><!-- .box -->
+            </div><!-- .parallax-box -->
+        </div><!-- .evasion__about -->
+
+        <div class="container">
+            <div class="box">
+                <div class="box__head">
+                    <h1 class="title title_gill">ÉVASION recommend</h1>
+                </div>
+                <ul class="box__list">
+                    <li class="box__col box__col_block">
+                        <div class="item">
+                            <div class="item__left">
+                                <a href="#" class="item__img">
+                                    <img src="img/item-1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div class="item__right">
+                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                                <p class="item__where">베트남, 다낭</p>
+                                <p class="item__about">
+                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                                </p>
+                                <p class="item__details">
+                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
+                                </p>
+                                <div class="item__more">
+                                    <a href="#" class="more">
+                                        자세히 보기
+                                        <b class="more__arrow">&rarr;</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+
+                    <li class="box__col box__col_block">
+                        <div class="item">
+                            <div class="item__left">
+                                <a href="#" class="item__img">
+                                    <img src="img/item-2.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div class="item__right">
+                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                                <p class="item__where">베트남, 다낭</p>
+                                <p class="item__about">
+                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                                </p>
+                                <p class="item__details">
+                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
+                                </p>
+                                <div class="item__more">
+                                    <a href="#" class="more">
+                                        자세히 보기
+                                        <b class="more__arrow">&rarr;</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+
+                    <li class="box__col box__col_block">
+                        <div class="item">
+                            <div class="item__left">
+                                <a href="#" class="item__img">
+                                    <img src="img/item-3.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div class="item__right">
+                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                                <p class="item__where">베트남, 다낭</p>
+                                <p class="item__about">
+                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                                </p>
+                                <p class="item__details">
+                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
+                                </p>
+                                <div class="item__more">
+                                    <a href="#" class="more">
+                                        자세히 보기
+                                        <b class="more__arrow">&rarr;</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+                </ul><!-- .box__list -->
+            </div><!-- .box -->
+        </div><!-- .container -->
+
+        <div class="container">
+            <div class="box">
+                <header class="box__head">
+                    <h1 class="title title_gill">Event</h1>
+                </header>
+
+                <ul class="box__list">
+                    <li class="box__col">
+                        <div class="item item_high">
+                            <a href="#" class="item__img">
+                                <img src="img/event-1.jpg" alt=""/>
+                            </a>
+                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                            <p class="item__details">
+                                에바종으로 친구초대하고 25,000원 적립금 받자!
+                                초대 메일을 받은 후 가입하면 25,000원 적립!
+                                초대된 친구가 구매하면 나에게도 25,000원 적립!
+                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                            </p>
+                            <div class="item__more">
+                                <a href="#" class="more">
+                                    자세히 보기
+                                    <b class="more__arrow">&rarr;</b>
+                                </a>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+
+                    <li class="box__col">
+                        <div class="item item_high">
+                            <a href="#" class="item__img">
+                                <img src="img/event-2.jpg" alt=""/>
+                            </a>
+                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                            <p class="item__details">
+                                에바종으로 친구초대하고 25,000원 적립금 받자!
+                                초대 메일을 받은 후 가입하면 25,000원 적립!
+                                초대된 친구가 구매하면 나에게도 25,000원 적립!
+                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                            </p>
+                            <div class="item__more">
+                                <a href="#" class="more">
+                                    자세히 보기
+                                    <b class="more__arrow">&rarr;</b>
+                                </a>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+
+                    <li class="box__col">
+                        <div class="item item_high">
+                            <a href="#" class="item__img">
+                                <img src="img/event-3.jpg" alt=""/>
+                            </a>
+                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                            <p class="item__details">
+                                에바종으로 친구초대하고 25,000원 적립금 받자!
+                                초대 메일을 받은 후 가입하면 25,000원 적립!
+                                초대된 친구가 구매하면 나에게도 25,000원 적립!
+                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                            </p>
+                            <div class="item__more">
+                                <a href="#" class="more">
+                                    자세히 보기
+                                    <b class="more__arrow">&rarr;</b>
+                                </a>
+                            </div>
+                        </div>
+                    </li><!-- .box__col -->
+                </ul><!-- .box__list -->
+            </div><!-- .box -->
+        </div><!-- .container -->
+
+        <div class="box box_gray">
+            <div class="container">
+                <header class="box__head">
+                    <h1 class="title title_gill">Our members say</h1>
+                </header>
+
+                <ul class="box__list">
+                    <li class="box__col box__col_centered">
+                        <div class="review">
+                            <div class="review__head">
+                                <h5 class="title">2015.08.24</h5>
+                            </div>
+                            <p class="review__text">
+                                에바종 덕분에 더시암이라는 호텔을
+                                알게되어 여행에 잘 다녀오게 되었습니다.
+                                계속 좋은 호텔 많이 소개 부탁드립니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="box__col box__col_centered">
+                        <div class="review__head">
+                            <h5 class="title">2015.09.10</h5>
+                        </div>
+                        <p class="review__text">
+                            홍콩여행 가기까지 우여곡절 많았는데
+                            여러번 도와준 에바종의 서비스에
+                            너무 감사드려요:-)
+                        </p>
+                    </li>
+                    <li class="box__col box__col_centered">
+                        <div class="review__head">
+                            <h5 class="title">2015.03.16</h5>
+                        </div>
+                        <p class="review__text">
+                            사우스케이프는 정말 감동 그 이상이었습니다.
+                            에바종을 통해 이렇게 멋진 곳을 다녀올 수
+                            있어서 감사하게 생각해요~!
+                        </p>
+                    </li>
+                </ul>
+            </div><!-- .container -->
+
+            <div class="evasion__text">
+                <p class="text">
+                    에바종과 함께 특별한 여행을 만들어 보세요.
+                </p>
+            </div>
+
+            <div class="evasion__actions">
+                <div class="actions">
+                    <a href="#" class="btn btn_pink">무료 회원 가입</a>
+                    <a href="#" class="btn">페이스북으로 가입</a>
+                </div>
+            </div>
+        </div><!-- .box box_gray -->
+
+        <footer class="evasion__foot foot">
+            <div class="container">
+                <div class="foot__top">
+                    <ul class="list list_big">
+                        <li class="list__el">
+                            <a href="#" class="list__link">에바종 소개</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">언론 보도 자료</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">공지 사항</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">자주 묻는 질문</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">이용 약관</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">개인 정보 취급 방침</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">인재 채용</a>
+                        </li>
+                        <li class="list__el">
+                            <a href="#" class="list__link">ÉVASION Meets</a>
+                        </li>
+                    </ul><!-- .list -->
+                </div>
+
+                <div class="foot__bottom">
+                    <div class="foot__left">
+                        <ul class="list">
+                            <li class="list__el">
+                                <small>TEL.</small>
+                                1577 - 9056
+                            </li>
+                            <li class="list__el">
+                                <small>Email.</small>
+                                info@evasion.co.kr
+                            </li>
+                            <li class="list__el">
+                                <small>AD.</small>
+                                ad@evasion.co.kr
+                            </li>
+                            <li class="list__el">
+                                <small>Address.</small>
+                                서울특별시 중구 정동길 33 신아기념관 304호
+                            </li>
+                        </ul><!-- .list -->
+
+                        <ul class="list">
+                            <li class="list__el">
+                                (주)본보야지
+                            </li>
+                            <li class="list__el">
+                                에드몽 위그 제라르 대표
+                            </li>
+                            <li class="list__el">
+                                2013-서울중구-1277
+                            </li>
+                            <li class="list__el">
+                                211-88-68189
+                            </li>
+                        </ul><!-- .list -->
+
+                        <p class="copyright">
+                            COPYRIGHT &copy; 2011 - 2014 BONVOYAGE INC. ALL RIGHT RESERVED.
+                        </p>
+                    </div>
+
+                    <div class="foot__right">
+                        <div class="social">
+                            <h6 class="title title_white">Find us on</h6>
+                            <ul class="social__list">
+                                <li class="social__el">
+                                    <a href="#" class="social__link">
+                                        <i class="icon icon_n"></i>
+                                    </a>
+                                </li>
+                                <li class="social__el">
+                                    <a href="#" class="social__link">
+                                        <i class="icon icon_fb"></i>
+                                    </a>
+                                </li>
+                                <li class="social__el">
+                                    <a href="#" class="social__link">
+                                        <i class="icon icon_tw"></i>
+                                    </a>
+                                </li>
+                                <li class="social__el">
+                                    <a href="#" class="social__link">
+                                        <i class="icon icon_instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- .social -->
+                    </div><!-- .foot__right -->
+                </div><!-- .foot__bottom -->
+            </div><!-- .container -->
+        </footer><!-- .evasion__foot foot -->
+    </section>
+</body>
+</html>
