@@ -72,7 +72,8 @@ var Evasion = {
   onLoginClick: function () {
     var self = this;
 
-    this.els.loginBtn.on('click', function () {
+    this.els.loginBtn.on('click', function (e) {
+      e.preventDefault();
       self.els.popup.show().css({'z-index': '9999'});
       self.loadPopupEvents();
     })
