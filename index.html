@@ -7,67 +7,15 @@
     <link rel="shortcut icon" href="img/evasion.ico"/>
     <link rel="stylesheet" href="css/app.css"/>
 
+    <!-- Libraries -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/fotorama-4.6.4.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
     <script src="js/animatedModal.min.js"></script>
     <script src="js/parallax.min.js"></script>
 
-    <script>
-        $(function() {
-            var windowHeight = $(window).height();
-            var headerBg = $('.js-header-bg');
-            var logo = $('.js-logo');
-            var fotorama = $('.fotorama');
-            var landing = $('.js-landing');
-            var carousel = $('.js-carousel');
-
-            $('.parallax-box').parallax({imageSrc: 'img/earth-bg.png'});
-
-            headerBg.hide();
-            landing.hide();
-
-            carousel.css({'height': windowHeight});
-
-            fotorama.on('fotorama:load', function () {
-                landing.show();
-                carousel.css({'height': 'auto'});
-            });
-
-            // Smooth scroll by clicking logo
-            logo.on('click', function() {
-                $.smoothScroll({
-                    speed: 800
-                });
-                return false;
-            });
-
-
-            // Header fade
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 100) {
-                    headerBg.fadeIn();
-                } else {
-                    headerBg.fadeOut();
-                }
-            });
-
-            fotorama.fotorama({
-                width: '100%',
-                transition: 'crossfade',
-                loop: true,
-                keyboard: true,
-                spinner: {
-                    lines: 10,
-                    length: 10,
-                    radius: 10,
-                    color: '#fff'
-                }
-            });
-
-            $('.js-login').animatedModal();
-        });
-    </script>
+    <!-- Project js -->
+    <script src="js/evasion.js"></script>
 </head>
 
 <body>
@@ -106,7 +54,7 @@
         </div>
     </div>
 
-    <section class="evasion js-landing">
+    <section class="evasion">
 
         <div class="parallax-box" data-image-src="img/earth-bg.png">
             <div class="box">
