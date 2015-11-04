@@ -11,7 +11,6 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/fotorama-4.6.4.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
-    <script src="js/animatedModal.min.js"></script>
     <script src="js/parallax.min.js"></script>
 
     <!-- Project js -->
@@ -26,7 +25,7 @@
             </a>
 
             <div class="login">
-                <a href="#animatedModal" class="js-login btn btn_small">Login</a>
+                <a href="#loginPopup" class="js-login-btn btn btn_small">Login</a>
             </div>
         </div>
         <div class="header__bg js-header-bg"></div>
@@ -57,7 +56,7 @@
     <section class="evasion">
 
         <div class="parallax-box" data-image-src="img/earth-bg.png">
-            <div class="box">
+            <div class="box container">
                 <header class="box__head">
                     <h1 class="title title_gill">About ÉVASION</h1>
                     <p class="info">
@@ -113,111 +112,26 @@
             </div><!-- .box -->
         </div><!-- .evasion__about -->
 
-        <div class="container">
-            <div class="box">
-                <div class="box__head">
-                    <h1 class="title title_gill">ÉVASION recommend</h1>
-                </div>
-                <ul class="box__list">
-                    <li class="box__col box__col_block">
-                        <div class="item">
-                            <div class="item__left">
-                                <a href="#" class="item__img">
-                                    <img src="img/item-1.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="item__right">
-                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
-                                <p class="item__where">베트남, 다낭</p>
-                                <p class="item__about">
-                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
-                                </p>
-                                <p class="item__details">
-                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
-                                </p>
-                                <div class="item__more">
-                                    <a href="#" class="more">
-                                        자세히 보기
-                                        <b class="more__arrow">&rarr;</b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><!-- .box__col -->
-
-                    <li class="box__col box__col_block">
-                        <div class="item">
-                            <div class="item__left">
-                                <a href="#" class="item__img">
-                                    <img src="img/item-2.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="item__right">
-                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
-                                <p class="item__where">베트남, 다낭</p>
-                                <p class="item__about">
-                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
-                                </p>
-                                <p class="item__details">
-                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
-                                </p>
-                                <div class="item__more">
-                                    <a href="#" class="more">
-                                        자세히 보기
-                                        <b class="more__arrow">&rarr;</b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><!-- .box__col -->
-
-                    <li class="box__col box__col_block">
-                        <div class="item">
-                            <div class="item__left">
-                                <a href="#" class="item__img">
-                                    <img src="img/item-3.jpg" alt=""/>
-                                </a>
-                            </div>
-                            <div class="item__right">
-                                <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
-                                <p class="item__where">베트남, 다낭</p>
-                                <p class="item__about">
-                                    Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
-                                </p>
-                                <p class="item__details">
-                                    객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
-                                </p>
-                                <div class="item__more">
-                                    <a href="#" class="more">
-                                        자세히 보기
-                                        <b class="more__arrow">&rarr;</b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li><!-- .box__col -->
-                </ul><!-- .box__list -->
-            </div><!-- .box -->
-        </div><!-- .container -->
-
-        <div class="container">
-            <div class="box">
-                <header class="box__head">
-                    <h1 class="title title_gill">Event</h1>
-                </header>
-
-                <ul class="box__list">
-                    <li class="box__col">
-                        <div class="item item_high">
+        <div class="box container">
+            <div class="box__head">
+                <h1 class="title title_gill">ÉVASION recommend</h1>
+            </div>
+            <ul class="box__list">
+                <li class="box__col box__col_block">
+                    <div class="item">
+                        <div class="item__left">
                             <a href="#" class="item__img">
-                                <img src="img/event-1.jpg" alt=""/>
+                                <img src="img/item-1.jpg" alt=""/>
                             </a>
-                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        </div>
+                        <div class="item__right">
+                            <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                            <p class="item__where">베트남, 다낭</p>
+                            <p class="item__about">
+                                Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                            </p>
                             <p class="item__details">
-                                에바종으로 친구초대하고 25,000원 적립금 받자!
-                                초대 메일을 받은 후 가입하면 25,000원 적립!
-                                초대된 친구가 구매하면 나에게도 25,000원 적립!
-                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                                객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
                             </p>
                             <div class="item__more">
                                 <a href="#" class="more">
@@ -226,19 +140,24 @@
                                 </a>
                             </div>
                         </div>
-                    </li><!-- .box__col -->
+                    </div>
+                </li><!-- .box__col -->
 
-                    <li class="box__col">
-                        <div class="item item_high">
+                <li class="box__col box__col_block">
+                    <div class="item">
+                        <div class="item__left">
                             <a href="#" class="item__img">
-                                <img src="img/event-2.jpg" alt=""/>
+                                <img src="img/item-2.jpg" alt=""/>
                             </a>
-                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        </div>
+                        <div class="item__right">
+                            <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                            <p class="item__where">베트남, 다낭</p>
+                            <p class="item__about">
+                                Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                            </p>
                             <p class="item__details">
-                                에바종으로 친구초대하고 25,000원 적립금 받자!
-                                초대 메일을 받은 후 가입하면 25,000원 적립!
-                                초대된 친구가 구매하면 나에게도 25,000원 적립!
-                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                                객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
                             </p>
                             <div class="item__more">
                                 <a href="#" class="more">
@@ -247,19 +166,24 @@
                                 </a>
                             </div>
                         </div>
-                    </li><!-- .box__col -->
+                    </div>
+                </li><!-- .box__col -->
 
-                    <li class="box__col">
-                        <div class="item item_high">
+                <li class="box__col box__col_block">
+                    <div class="item">
+                        <div class="item__left">
                             <a href="#" class="item__img">
-                                <img src="img/event-3.jpg" alt=""/>
+                                <img src="img/item-3.jpg" alt=""/>
                             </a>
-                            <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        </div>
+                        <div class="item__right">
+                            <h3 class="item__name">하얏트 리젠시 다낭 리조트 & 스파</h3>
+                            <p class="item__where">베트남, 다낭</p>
+                            <p class="item__about">
+                                Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                            </p>
                             <p class="item__details">
-                                에바종으로 친구초대하고 25,000원 적립금 받자!
-                                초대 메일을 받은 후 가입하면 25,000원 적립!
-                                초대된 친구가 구매하면 나에게도 25,000원 적립!
-                                상시로 친구초대 추가 이벤트도 진행됩니다.
+                                객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
                             </p>
                             <div class="item__more">
                                 <a href="#" class="more">
@@ -268,10 +192,81 @@
                                 </a>
                             </div>
                         </div>
-                    </li><!-- .box__col -->
-                </ul><!-- .box__list -->
-            </div><!-- .box -->
-        </div><!-- .container -->
+                    </div>
+                </li><!-- .box__col -->
+            </ul><!-- .box__list -->
+        </div><!-- .box -->
+
+        <div class="box container">
+            <header class="box__head">
+                <h1 class="title title_gill">Event</h1>
+            </header>
+
+            <ul class="box__list">
+                <li class="box__col">
+                    <div class="item item_high">
+                        <a href="#" class="item__img">
+                            <img src="img/event-1.jpg" alt=""/>
+                        </a>
+                        <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        <p class="item__details">
+                            에바종으로 친구초대하고 25,000원 적립금 받자!
+                            초대 메일을 받은 후 가입하면 25,000원 적립!
+                            초대된 친구가 구매하면 나에게도 25,000원 적립!
+                            상시로 친구초대 추가 이벤트도 진행됩니다.
+                        </p>
+                        <div class="item__more">
+                            <a href="#" class="more">
+                                자세히 보기
+                                <b class="more__arrow">&rarr;</b>
+                            </a>
+                        </div>
+                    </div>
+                </li><!-- .box__col -->
+
+                <li class="box__col">
+                    <div class="item item_high">
+                        <a href="#" class="item__img">
+                            <img src="img/event-2.jpg" alt=""/>
+                        </a>
+                        <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        <p class="item__details">
+                            에바종으로 친구초대하고 25,000원 적립금 받자!
+                            초대 메일을 받은 후 가입하면 25,000원 적립!
+                            초대된 친구가 구매하면 나에게도 25,000원 적립!
+                            상시로 친구초대 추가 이벤트도 진행됩니다.
+                        </p>
+                        <div class="item__more">
+                            <a href="#" class="more">
+                                자세히 보기
+                                <b class="more__arrow">&rarr;</b>
+                            </a>
+                        </div>
+                    </div>
+                </li><!-- .box__col -->
+
+                <li class="box__col">
+                    <div class="item item_high">
+                        <a href="#" class="item__img">
+                            <img src="img/event-3.jpg" alt=""/>
+                        </a>
+                        <h3 class="item__name">친구초대하고 적립받자!</h3>
+                        <p class="item__details">
+                            에바종으로 친구초대하고 25,000원 적립금 받자!
+                            초대 메일을 받은 후 가입하면 25,000원 적립!
+                            초대된 친구가 구매하면 나에게도 25,000원 적립!
+                            상시로 친구초대 추가 이벤트도 진행됩니다.
+                        </p>
+                        <div class="item__more">
+                            <a href="#" class="more">
+                                자세히 보기
+                                <b class="more__arrow">&rarr;</b>
+                            </a>
+                        </div>
+                    </div>
+                </li><!-- .box__col -->
+            </ul><!-- .box__list -->
+        </div><!-- .box -->
 
         <div class="box parallax-box" data-image-src="img/earth-bg.png">
             <div class="container">
@@ -313,20 +308,20 @@
                         </p>
                     </li>
                 </ul>
-            </div><!-- .container -->
 
-            <div class="evasion__text">
-                <p class="text">
-                    에바종과 함께 특별한 여행을 만들어 보세요.
-                </p>
-            </div>
-
-            <div class="evasion__actions">
-                <div class="actions">
-                    <a href="#" class="btn btn_pink">무료 회원 가입</a>
-                    <a href="#" class="btn btn_blue">페이스북으로 가입</a>
+                <div class="evasion__text">
+                    <p class="text">
+                        에바종과 함께 특별한 여행을 만들어 보세요.
+                    </p>
                 </div>
-            </div>
+
+                <div class="evasion__actions">
+                    <div class="actions">
+                        <a href="#" class="btn btn_pink">무료 회원 가입</a>
+                        <a href="#" class="btn">페이스북으로 가입</a>
+                    </div>
+                </div>
+            </div><!-- .container -->
         </div><!-- .box parallax-box -->
 
         <footer class="evasion__foot foot">
@@ -434,9 +429,9 @@
     </section><!-- .evasion js-landing -->
 
     <!-- Login popup -->
-    <div id="animatedModal" class="login-modal modal">
-        <div class="modal-content">
-            <div class="close-animatedModal">
+    <div id="loginPopup" class="popup login-popup js-popup">
+        <div class="popup__content">
+            <div class="popup__close js-close-popup">
                 <i class="icon icon_close"></i>
             </div>
 
@@ -452,9 +447,8 @@
                 </div>
                 <div class="input">
                     <input type="password"
-                           class="input__el input__el_not-valid"
+                           class="input__el"
                            placeholder="비밀번호를 입력하세요."/>
-                    <p class="input__error">This is input error example text</p>
                 </div>
 
                 <input type="submit" class="btn btn_blue btn_block" value="로그인">
@@ -479,7 +473,7 @@
                 </a>
             </form>
         </div>
-    </div><!-- .login-modal modal -->
+    </div><!-- .popup login-popup js-popup -->
     <!-- Login popup end -->
 </body>
 </html>

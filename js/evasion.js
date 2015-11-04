@@ -6,11 +6,14 @@ var Evasion = {
     fotorama: null,
     carousel: null,
     parallax: null,
-    login: null
+    loginBtn: null,
+    loginPopup: null,
+    closePopup: null
   },
 
   values: {
-    windowHeight: null
+    windowHeight: null,
+    ESC_KEYCODE: 27
   },
 
   initElements: function () {
@@ -20,7 +23,9 @@ var Evasion = {
     this.els.fotorama = $('.fotorama');
     this.els.carousel = $('.js-carousel');
     this.els.parallax = $('.parallax-box');
-    this.els.login = $('.js-login');
+    this.els.loginBtn = $('.js-login-btn');
+    this.els.popup = $('.js-popup');
+    this.els.closePopup = $('.js-close-popup');
 
     return this;
   },
@@ -34,23 +39,20 @@ var Evasion = {
   initialize: function () {
     this.initElements();
     this.initValues();
-    this.loadPlugins();
 
+    this.loadParallax();
     this.onLandingLoaded();
+
     this.loadEvents();
 
     return this;
-  },
-
-  loadPlugins: function () {
-    this.loadParallax();
-    this.animateModal();
   },
 
   loadEvents: function () {
     this.onWindowScroll();
     this.onFotoramaLoad();
     this.onLogoClick();
+    this.onLoginClick();
   },
 
   onLandingLoaded: function () {
@@ -64,6 +66,29 @@ var Evasion = {
         speed: 800
       });
       return false;
+    });
+  },
+
+  onLoginClick: function () {
+    var self = this;
+
+    this.els.loginBtn.on('click', function () {
+      self.els.popup.show().css({'z-index': '9999'});
+      self.loadPopupEvents();
+    })
+  },
+
+  loadPopupEvents: function () {
+    var self = this;
+
+    this.els.closePopup.on('click', function () {
+      self.closePopup();
+    });
+
+    this.els.window.keyup(function (e) {
+      if(e.keyCode == self.values.ESC_KEYCODE){
+        self.closePopup();
+      }
     });
   },
 
@@ -99,12 +124,12 @@ var Evasion = {
     });
   },
 
-  loadParallax: function () {
-    this.els.parallax.parallax({imageSrc: 'img/earth-bg.png'});
+  closePopup: function () {
+    this.els.popup.hide();
   },
 
-  animateModal: function () {
-    this.els.login.animatedModal();
+  loadParallax: function () {
+    this.els.parallax.parallax({imageSrc: 'img/earth-bg.png'});
   },
 
   hideHeaderBg: function () {
