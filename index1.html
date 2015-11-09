@@ -9,8 +9,9 @@
 
     <!-- Libraries -->
     <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/fotorama-4.6.4.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
     <script src="js/parallax.min.js"></script>
 
     <!-- Project js -->
@@ -32,10 +33,13 @@
     </header>
 
     <div class="carousel">
-        <div class="fotorama">
-            <img src="img/danang.jpg" alt=""/>
-            <img src="img/cambrian.jpg" alt=""/>
-            <img src="img/siam.jpg" alt=""/>
+        <div class="fotorama" 
+             data-autoplay="7000" 
+             data-transition="crossfade"
+             data-arrows="false">
+            <img src="img/Optimized-hyatt_danang.png" alt="hyattregency"/>
+            <img src="img/Optimized-cambrian.png" alt="cambrian"/>
+            <img src="img/Optimized-siam.png" alt="siam"/>
         </div>
     </div>
 
@@ -55,10 +59,10 @@
 
     <section class="evasion">
 
-        <div class="parallax-box" data-image-src="img/memberbg.png">
+        <div class="parallax-box" data-image-src="img/earth-bg.png">
             <div class="boxlast container">
                 <header class="box__head">
-                    <h1 class="title title_gill">About ÉVASION</h1>
+                    <h1 class="title title_gill">ÉVASION <span class="kotitle">소개</span></h1>
                     <p class="info">
                         에바종은 전세계의 럭셔리 리조트와 디자인 부티크 호텔만을 엄선하여<br>
                         회원들에게 특별한 프로모션으로 제공하는 회원제 호텔 예약 서비스입니다.
@@ -114,7 +118,7 @@
 
         <div class="box container">
             <div class="box__head">
-                <h1 class="title title_gill">ÉVASION recommend</h1>
+                <h1 class="title title_gill">ÉVASION <span class="kotitle">추천호텔</span></h1>
             </div>
             <ul class="box__list">
                 <li class="box__col box__col_block">
@@ -199,7 +203,7 @@
 
         <div class="boxlast container">
             <header class="box__head">
-                <h1 class="title title_gill">Event</h1>
+                <h1 class="title title_gill"><span class="kotitle">이벤트</span></h1>
             </header>
 
             <ul class="box__event">
@@ -273,7 +277,7 @@
         <div class="boxlast parallax-box" data-image-src="img/earth-bg.png">
             <div class="container">
                 <header class="box__head">
-                    <h1 class="title title_gill">Our members say</h1>
+                    <h1 class="title title_gill"><span class="kotitle">고객후기</span></h1>
                 </header>
 
                 <ul class="box__list">

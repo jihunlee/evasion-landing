@@ -108,7 +108,7 @@ var Evasion = {
   onFotoramaLoad: function () {
     var self = this;
     this.els.fotorama.on('fotorama:load', function () {
-      self.els.carousel.css({'height': 'auto'});
+      self.els.carousel.css({'height': '895px'});
     });
 
     this.els.fotorama.fotorama({
