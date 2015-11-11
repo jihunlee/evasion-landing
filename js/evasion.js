@@ -63,7 +63,7 @@ var Evasion = {
   onLogoClick: function () {
     this.els.logo.on('click', function () {
       $.smoothScroll({
-        speed: 800
+        speed: 500
       });
       return false;
     });
@@ -130,7 +130,7 @@ var Evasion = {
   },
 
   loadParallax: function () {
-    this.els.parallax.parallax({imageSrc: 'img/earth-bg.png'});
+    this.els.parallax.parallax();
   },
 
   hideHeaderBg: function () {

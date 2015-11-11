@@ -128,7 +128,7 @@ strong{font-weight:700}@-webkit-keyframes carousel-background{0%,895px;{backgrou
 .btn:active,.btn:hover,.btn:link,.btn:visited{color:#4bd0d2}
 .btn_blue:active,.btn_blue:hover,.btn_blue:link,.btn_blue:visited,.btn_fb,.btn_fb:active,.btn_fb:hover,.btn_fb:link,.btn_fb:visited,.btn_gray,.btn_gray:active,.btn_gray:hover,.btn_gray:link,.btn_gray:visited,.btn_pink,.btn_pink:active,.btn_pink:hover,.btn_pink:link,.btn_pink:visited,.list,.list__el:after{color:#fff}
 .btn_pink{background:#f30a61;border-color:#f30a61}
-.btn_gray{background:#3e63af;border-color:#3e63af}
+.btn_gray{background-color: rgba(0, 0, 0, .15); border-color:white}
 .btn_small{min-width:inherit;height:auto;padding:10px 20px;font-size:14px}
 .btn_blue{background:#00c0c0;border-color:#00c0c0;color:#fff}
 .btn_block{width:100%}
