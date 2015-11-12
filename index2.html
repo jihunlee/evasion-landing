@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EVASION</title>
+    <title>ÉVASION</title>
 
     <link rel="shortcut icon" href="img/evasion.ico"/>
     <link rel="stylesheet" href="css/app2.css"/>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PCT28G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCT28G');</script>
+<!-- End Google Tag Manager -->
 
     <!-- Libraries -->
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -16,17 +26,37 @@
 
     <!-- Project js -->
     <script src="js/evasion.js"></script>
+    <script>
+    $('#aboutSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'aboutSection');
+    });
+    $('#recommendSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'recommendSection');
+    });
+    $('#eventSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'eventSection');
+    });
+    $('#membersSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'membersSection');
+    });
+    $('#footerSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'footerSection');
+    });
+    $('#loginPopup').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'loginPopup');
+    });
+    </script>
 </head>
 
 <body>
     <header class="header">
         <div class="header__in">
-            <a href="#" class="logo js-logo">
-                <img src="img/evasion-logo.png" alt="Evasion logo"/>
+            <a href="#" class="logo js-logo" onmousedown="ga('send', 'event', '/', 'click', 'logoUpToTop');">
+                <img src="img/evasion-logo.png" alt="ÉVASION"/>
             </a>
 
             <div class="login">
-                <a href="#" class="js-login-btn btn btn_small">로그인</a>
+                <a href="#" class="js-login-btn btn btn_small" onmousedown="ga('send', 'event', '/', 'click', 'loginBtn');">로그인</a>
             </div>
         </div>
         <div class="header__bg js-header-bg"></div>
@@ -52,8 +82,8 @@
         </div>
 
         <div class="actions">
-            <a href="#" class="btn btn_pink">무료 회원 가입</a>
-            <a href="#" class="btn btn_gray">페이스북으로 가입</a>
+            <a href="/bbs/join_form.html?" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_top');" class="btn btn_pink">무료 회원 가입</a>
+            <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_top');" href="#_" class="btn btn_gray">페이스북으로 가입</a>
         </div>
     </div>
 
@@ -69,7 +99,7 @@
                     </p>
                 </header>
 
-                <ul class="box__list">
+                <ul class="box__list" id="aboutSection">
                     <li class="box__col box__col_centered">
                         <div class="about">
                             <div class="about__img-box">
@@ -124,7 +154,7 @@
                 <li class="box__col box__col_block">
                     <div class="item itemfirst">
                         <div class="item__left">
-                            <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1395389185871" class="item__img">
+                            <a href="/goods/goods_view.php?g_code=G1395389185871" class="item__img" onmousedown="ga('send', 'event', '/', 'click', 'recommend_photo_1_hyattregencydanang');">
                                 <img src="img/item-1.jpg" alt=""/>
                             </a>
                         </div>
@@ -138,7 +168,7 @@
                                 객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
                             </p>
                             <div class="item__more">
-                                <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1395389185871" class="more">
+                                <a href="/goods/goods_view.php?g_code=G1395389185871" class="more" id="recommendSection" onmousedown="ga('send', 'event', '/', 'click', 'recommend_detail_1_hyattregencydanang');">
                                     예약하기
                                     <img class="more__arrow" src="img/arrow.png" alt="arrow">
                                 </a>
@@ -150,7 +180,7 @@
                 <li class="box__col box__col_block">
                     <div class="item">
                         <div class="item__left">
-                            <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1446428336231" class="item__img">
+                            <a href="/goods/goods_view.php?g_code=G1446428336231" class="item__img" onmousedown="ga('send', 'event', '/', 'click', 'recommend_photo_2_cambrian');">
                                 <img src="img/item-2.jpg" alt=""/>
                             </a>
                         </div>
@@ -164,7 +194,7 @@
                                 세계에서 가장 아름다운 10대 수영장으로 선정된 인피니티 풀
                             </p>
                             <div class="item__more">
-                                <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1446428336231" class="more">
+                                <a href="/goods/goods_view.php?g_code=G1446428336231" class="more" onmousedown="ga('send', 'event', '/', 'click', 'recommend_detail_2_cambrian');">
                                     예약하기
                                     <img class="more__arrow" src="img/arrow.png" alt="arrow">
                                 </a>
@@ -176,7 +206,7 @@
                 <li class="box__col box__col_block">
                     <div class="item">
                         <div class="item__left">
-                            <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1372811980401" class="item__img">
+                            <a href="/goods/goods_view.php?g_code=G1372811980401" class="item__img" onmousedown="ga('send', 'event', '/', 'click', 'recommend_photo_3_thesiam');">
                                 <img src="img/item-3.jpg" alt=""/>
                             </a>
                         </div>
@@ -190,7 +220,7 @@
                                 태국 골동품 수집가, 수코손 여사 일가의 유물이 전시된 인테리어
                             </p>
                             <div class="item__more">
-                                <a href="http://www.evasion.co.kr/goods/goods_view.php?g_code=G1372811980401" class="more">
+                                <a href="/goods/goods_view.php?g_code=G1372811980401" class="more" onmousedown="ga('send', 'event', '/', 'click', 'recommended_detail_3_thesiam');">
                                     예약하기
                                     <img class="more__arrow" src="img/arrow.png" alt="arrow">
                                 </a>
@@ -209,7 +239,7 @@
             <ul class="box__event">
                 <li class="box__col">
                     <div class="">
-                        <a href="http://www.evasion.co.kr/bbs/invite.php" class="event__img js-login-btn">
+                        <a href="/bbs/invite.php" class="event__img js-login-btn" onmousedown="ga('send', 'event', '/', 'click', 'event_photo_1_invitefriend');">
                             <img src="img/event-1.jpg" alt=""/>
                         </a>
                         <p class="event__name">친구초대하고 적립받자!</p>
@@ -220,7 +250,7 @@
                             상시로 친구초대 추가 이벤트도 진행됩니다.
                         </p>
                         <div class="event__more">
-                            <a href="http://www.evasion.co.kr/bbs/invite.php" class="more js-login-btn">
+                            <a href="/bbs/invite.php" class="more js-login-btn" id="eventSection" onmousedown="ga('send', 'event', '/', 'click', 'event_detail_1_invitefriend');">
                                 자세히 보기
                                 <img class="more__arrow" src="img/arrow.png" alt="arrow">
                             </a>
@@ -230,7 +260,7 @@
 
                 <li class="box__col">
                     <div class="">
-                        <a href="http://www.evasion.co.kr/event/luston/" class="event__img">
+                        <a href="/event/luston/" class="event__img" onmousedown="ga('send', 'event', '/', 'click', 'event_photo_2_luston');">
                             <img src="img/event-2.jpg" alt=""/>
                         </a>
                         <p class="event__name">내가 직접 체험하는 에바종 호텔</p>
@@ -241,7 +271,7 @@
                             루스톤 빌라앤호텔 숙박권을 드립니다.
                         </p>
                         <div class="event__more">
-                            <a href="http://www.evasion.co.kr/event/luston/" class="more">
+                            <a href="/event/luston/" class="more" onmousedown="ga('send', 'event', '/', 'click', 'event_detail_2_luston');">
                                 자세히 보기
                                 <img class="more__arrow" src="img/arrow.png" alt="arrow">
                             </a>
@@ -251,7 +281,7 @@
 
                 <li class="box__col">
                     <div class="">
-                        <a href="http://www.evasion.co.kr/event/samsungcard/" class="event__img">
+                        <a href="/event/samsungcard/" class="event__img" onmousedown="ga('send', 'event', '/', 'click', 'event_photo_3_samsungcard');">
                             <img src="img/event-3.jpg" alt=""/>
                         </a>
                         <p class="event__name">삼성카드 특별할인 이벤트</p>
@@ -264,7 +294,7 @@
 
                         </p>
                         <div class="event__more">
-                            <a href="http://www.evasion.co.kr/event/samsungcard/" class="more">
+                            <a href="/event/samsungcard/" class="more" onmousedown="ga('send', 'event', '/', 'click', 'event_detail_3_samsungcard');">
                                 자세히 보기
                                 <img class="more__arrow" src="img/arrow.png" alt="arrow">
                             </a>
@@ -316,15 +346,15 @@
                 </ul>
 
                 <div class="evasion__text">
-                    <p class="text">
+                    <p class="text" id="membersSection">
                         에바종과 함께 특별한 여행을 만들어 보세요.
                     </p>
                 </div>
 
                 <div class="evasion__actions">
                     <div class="actions">
-                        <a href="#" class="btn btn_pink">무료 회원 가입</a>
-                        <a href="#" class="btn btn_gray">페이스북으로 가입</a>
+                        <a href="/bbs/join_form.html?" class="btn btn_pink" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_bottom');">무료 회원 가입</a>
+                        <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_bottom');" class="btn btn_gray">페이스북으로 가입</a>
                     </div>
                 </div>
             </div><!-- .container -->
@@ -335,28 +365,28 @@
                 <div class="foot__top">
                     <ul class="list list_big">
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/evasion.php" class="list__link">에바종 소개</a>
+                            <a href="/evasion.php" class="list__link" id="footerSection" onmousedown="ga('send', 'event', '/', 'click', 'footer_about');">에바종 소개</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/meets/index.html" class="list__link">ÉVASION Meets</a>
+                            <a href="/meets/" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_meets');">ÉVASION Meets</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/bbs/board.php?bo_table=notice" class="list__link">공지 사항</a>
+                            <a href="/bbs/board.php?bo_table=notice" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_notices');">공지 사항</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/bbs/board.php?bo_table=faq#" class="list__link">자주 묻는 질문</a>
+                            <a href="/bbs/board.php?bo_table=faq" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_faq');">자주 묻는 질문</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/legal.php" class="list__link">이용 약관</a>
+                            <a href="/legal.php" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_legal');">이용 약관</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/service.php" class="list__link">개인 정보 취급 방침</a>
+                            <a href="/service.php" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_service');">개인 정보 취급 방침</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/bbs/board.php?bo_table=recruit" class="list__link">인재 채용</a>
+                            <a href="/bbs/board.php?bo_table=recruit" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_recruit');">인재 채용</a>
                         </li>
                         <li class="list__el">
-                            <a href="http://www.evasion.co.kr/bbs/board.php?bo_table=media" class="list__link">언론 보도 자료</a>
+                            <a href="/bbs/board.php?bo_table=media" class="list__link" onmousedown="ga('send', 'event', '/', 'click', 'footer_media');">언론 보도 자료</a>
                         </li>
                     </ul><!-- .list -->
                 </div>
@@ -398,7 +428,7 @@
                         </ul><!-- .list -->
 
                         <p class="copyright">
-                            COPYRIGHT &copy; 2011 - 2014 BONVOYAGE INC. ALL RIGHT RESERVED.
+                            COPYRIGHT &copy; 2011 - 2015 BONVOYAGE INC. ALL RIGHT RESERVED.
                         </p>
                     </div>
 
@@ -407,22 +437,22 @@
                             <h6 class="title title_white">Find us on</h6>
                             <ul class="social__list">
                                 <li class="social__el">
-                                    <a href="http://blog.naver.com/evasionkorea" class="social__link" target="_blank">
+                                    <a href="http://blog.naver.com/evasionkorea" class="social__link" target="_blank" onmousedown="ga('send', 'event', '/', 'click', 'social_naverblog');">
                                         <i class="icon icon_n"></i>
                                     </a>
                                 </li>
                                 <li class="social__el">
-                                    <a href="http://www.facebook.com/evasionkr" class="social__link" target="_blank">
+                                    <a href="https://www.facebook.com/evasionkr" class="social__link" target="_blank" onmousedown="ga('send', 'event', '/', 'click', 'social_facebook');">
                                         <i class="icon icon_fb"></i>
                                     </a>
                                 </li>
                                 <li class="social__el">
-                                    <a href="http://twitter.com/evasionkr" class="social__link" target="_blank">
+                                    <a href="https://twitter.com/evasionkr" class="social__link" target="_blank" onmousedown="ga('send', 'event', '/', 'click', 'social_twitter');">
                                         <i class="icon icon_tw"></i>
                                     </a>
                                 </li>
                                 <li class="social__el">
-                                    <a href="https://instagram.com/evasionkorea/" class="social__link" target="_blank">
+                                    <a href="https://instagram.com/evasionkorea/" class="social__link" target="_blank" onmousedown="ga('send', 'event', '/', 'click', 'social_instagram');">
                                         <i class="icon icon_instagram"></i>
                                     </a>
                                 </li>
@@ -441,8 +471,8 @@
                 <i class="icon icon_close"></i>
             </div>
 
-            <span class="logo logo_top-null">
-                <img src="img/evasion-logo-dark.png" alt="Evasion logo"/>
+            <span class="logo logo_top-null" id="loginPopup">
+                <img src="img/evasion-logo-dark.png" alt="ÉVASION"/>
             </span>
 
             <form action="" class="login-form">
@@ -457,7 +487,7 @@
                            placeholder="비밀번호를 입력하세요."/>
                 </div>
 
-                <input type="submit" class="btn btn_blue btn_block" value="로그인">
+                <input type="submit" class="btn btn_blue btn_block" value="로그인" onmousedown="ga('send', 'event', '/', 'click', 'login_submit');">
 
                 <div class="login-form__opts">
                     <label class="login-form__remember">
@@ -465,9 +495,9 @@
                         <span>로그인 상태 유지</span>
                     </label>
                     
-                    <a href="/bbs/password_lost.php" class="login-form__forgot-pass"> 비밀번호 찾기</a>
+                    <a href="/bbs/password_lost.php" class="login-form__forgot-pass" onmousedown="ga('send', 'event', '/', 'click', 'passwordLost');"> 비밀번호 찾기</a>
                     <p class="login-form__forgot-divider"> | </p>
-                    <a href="/bbs/id_lost.php" class="login-form__forgot-id">아이디</a>
+                    <a href="/bbs/id_lost.php" class="login-form__forgot-id" onmousedown="ga('send', 'event', '/', 'click', 'idLost');">아이디</a>
                 </div>
 
                 <p class="or-separator">
@@ -475,7 +505,7 @@
                     <i class="or-separator__line"></i>
                 </p>
 
-                <a href="#" class="btn btn_fb btn_block btn_icon">
+                <a href="javascript:facebooklogin();" class="btn btn_fb btn_block btn_icon" onmousedown="ga('send', 'event', '/', 'click', 'facebookLogin');">
                     <i class="icon icon_fb-white"></i>
                     <span>페이스북 로그인</span>
                 </a>
