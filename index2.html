@@ -27,27 +27,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Project js -->
     <script src="js/evasion.js"></script>
-    <script>
-    
-    $('#aboutSection').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'aboutSection');
-    });
-    $('#recommendSection').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'recommendSection');
-    });
-    $('#eventSection').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'eventSection');
-    });
-    $('#membersSection').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'membersSection');
-    });
-    $('#footerSection').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'footerSection');
-    });
-    $('#loginPopup').on('inview', function() {
-      ga('send', 'event', '/', 'displayed', 'loginPopup');
-    });
-    </script>
 </head>
 
 <body>
@@ -94,14 +73,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="parallax-box" data-image-src="img/earth-bg.png">
             <div class="boxlast container">
                 <header class="box__head">
-                    <h1 class="title title_gill">ÉVASION <span class="kotitle">소개</span></h1>
+                    <h1 class="title title_gill" id="aboutSection">ÉVASION <span class="kotitle">소개</span></h1>
                     <p class="info">
                         에바종은 전세계의 럭셔리 리조트와 디자인 부티크 호텔만을 엄선하여<br>
                         회원들에게 특별한 프로모션으로 제공하는 회원제 호텔 예약 서비스입니다.
                     </p>
                 </header>
 
-                <ul class="box__list" id="aboutSection">
+                <ul class="box__list">
                     <li class="box__col box__col_centered">
                         <div class="about">
                             <div class="about__img-box">
@@ -515,5 +494,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div><!-- .popup login-popup js-popup -->
     <!-- Login popup end -->
+
+    <script>    
+$('#aboutSection').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'aboutSection');
+  alert('1vs');
+});
+$('#recommendSection').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'recommendSection');
+  alert('2');
+});
+$('#eventSection').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'eventSection');
+  alert('3');
+});
+$('#membersSection').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'membersSection');
+  alert('4');
+});
+$('#footerSection').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'footerSection');
+  alert('5');
+});
+$('#loginPopup').on('inview', function() {
+  ga('send', 'event', '/', 'displayed', 'loginPopup');
+  alert('6');
+});
+alert('0');
+    </script>
 </body>
 </html>
