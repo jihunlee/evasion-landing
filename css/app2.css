@@ -48,7 +48,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none}
 .clearfix,.title__row{display:block}
-.title__row{font-family:'nanum-barun-gothic-ultralight', sans-serif;line-height:1.5;font-size:30px; font-weight:200;}
+.title__row{font-family:'nanum-barun-gothic-ultralight', sans-serif;line-height:1.5;font-size:30px; font-weight:200; text-shadow:0 0 7px #333}
 sub,sup{font-size:75%;line-height:0;vertical-align:baseline}
 sup{top:-.5em}
 sub{bottom:-.25em}
