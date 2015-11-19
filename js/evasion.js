@@ -16,6 +16,10 @@ var Evasion = {
     ESC_KEYCODE: 27
   },
 
+  inViewIds: [
+    'aboutSection', 'recommendSection', 'eventSection', 'membersSection',  'footerSection', 'loginForm'
+  ],
+
   initElements: function () {
     this.els.window = $(window);
     this.els.headerBg = $('.js-header-bg');
@@ -26,26 +30,35 @@ var Evasion = {
     this.els.loginBtn = $('.js-login-btn');
     this.els.popup = $('.js-popup');
     this.els.closePopup = $('.js-close-popup');
-
-    return this;
   },
 
   initValues: function () {
     this.values.windowHeight = this.els.window.height();
-
-    return this;
   },
+
+  initInView: function() {
+    var self = this;
+    for(var i in this.inViewIds) {
+      (function() {
+        var id = self.inViewIds[i];
+        $('#' + id).one('inview', function() {
+          console.log('inview.' + id);
+          ga('send', 'event', '/', 'displayed', id);
+        });
+      })();
+    }
+  },
+
 
   initialize: function () {
     this.initElements();
     this.initValues();
+    this.initInView();
 
     this.loadParallax();
     this.onLandingLoaded();
 
     this.loadEvents();
-
-    return this;
   },
 
   loadEvents: function () {
