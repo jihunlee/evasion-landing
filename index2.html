@@ -102,7 +102,7 @@
 
         <div class="actions">
             <a href="/bbs/join_form.html?" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_top');" class="btn btn_pink">무료 회원 가입</a>
-            <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_top'); return false;" href="#" class="btn btn_gray">페이스북으로 가입</a>
+            <a onclick="facebooklogin(); return false;" class="btn btn_gray" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_top');" href="#">페이스북으로 가입</a>
         </div>
     </div>
 
@@ -494,7 +494,7 @@
                 <img src="img/evasion-logo-dark.png" alt="ÉVASION"/>
             </span>
 
-            <form id="loginForm" action="https://www.evasion.co.kr/bbs/login_checkn.php" class="login-form" method="post" target="_parent">
+            <form id="loginForm" action="/bbs/login_checkn.php" class="login-form" method="post" target="_parent">
                 <input type="hidden" name="url" value="" />
                 <div class="input">
                     <input type="email"
