@@ -89,6 +89,9 @@ var Evasion = {
       e.preventDefault();
       self.els.popup.show().css({'z-index': '9999'});
       self.loadPopupEvents();
+      if(this.href != '#') {
+        self.els.popup.find('input[name=url]').val(this.href);
+      }
     })
   },
 

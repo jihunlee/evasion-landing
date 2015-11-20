@@ -35,25 +35,6 @@
     <noscript><img src='http://gtp1.acecounter.com:8080/?uid=AM6A38097854060&je=n&' border='0' width='0' height='0' /></noscript>
     <!-- AceCounter End -->
 
-    <script language="javascript">
-    window.fbAsyncInit = function() {FB.init({appId:'697953113640050',status:true,cookie:true,xfbml:true});};
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=697953113640050";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    function facebooklogin() {
-    FB.login(function(response) {
-    if (response.authResponse) {
-       parent.location.replace('/bbs/fbLoginProcess.php?url=/main.php');  // connected
-    } else {
-    	return false;
-    }
-    },{scope: 'public_profile,email'});}
-    </script>
-
 
     <!-- Libraries -->
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -65,6 +46,25 @@
 
     <!-- Project js -->
     <script src="js/evasion.js"></script>
+
+    <script language="javascript">
+        window.fbAsyncInit = function() {FB.init({appId:'697953113640050',status:true,cookie:true,xfbml:true});};
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=697953113640050";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        function facebooklogin() {
+        FB.login(function(response) {
+        if (response.authResponse) {
+           parent.location.replace('/bbs/fbLoginProcess.php?url=' + $('#loginForm input[name=url]').val());  // connected
+        } else {
+        	return false;
+        }
+        },{scope: 'public_profile,email'});}
+    </script>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
             </a>
 
             <div class="login">
-                <a href="#" class="js-login-btn btn btn_small" onmousedown="ga('send', 'event', '/', 'click', 'loginBtn');">로그인</a>
+                <a href="/main.php" class="js-login-btn btn btn_small" onmousedown="ga('send', 'event', '/', 'click', 'loginBtn');">로그인</a>
             </div>
         </div>
         <div class="header__bg js-header-bg"></div>
@@ -373,7 +373,7 @@
                 <div class="evasion__actions">
                     <div class="actions">
                         <a href="/bbs/join_form.html?" class="btn btn_pink" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_bottom');">무료 회원 가입</a>
-                        <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_bottom');" class="btn btn_gray">페이스북으로 가입</a>
+                        <a onclick="facebooklogin(); return false;" href="#" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_bottom');" class="btn btn_gray">페이스북으로 가입</a>
                     </div>
                 </div>
             </div><!-- .container -->
@@ -495,7 +495,7 @@
             </span>
 
             <form id="loginForm" action="/bbs/login_checkn.php" class="login-form" method="post" target="_parent">
-                <input type="hidden" name="url" value="" />
+                <input type="hidden" name="url" value="/main.php" />
                 <div class="input">
                     <input type="email"
                            name="mb_id"
@@ -513,7 +513,7 @@
 
                 <div class="login-form__opts">
                     <label class="login-form__remember">
-                        <input type="checkbox" name="auto_login"/>
+                        <input style="margin:5px 0 0 0;" type="checkbox" id="auto_login" name="auto_login" value="1" onclick="if (this.checked) { if (confirm('자동로그인을 사용하시면 6개월간 아이디와 패스워드를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?')) { this.checked = true; } else { this.checked = false; } }" />
                         <span>로그인 상태 유지</span>
                     </label>
                     
