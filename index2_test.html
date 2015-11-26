@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ÉVASION</title>
@@ -7,16 +7,15 @@
     <link rel="shortcut icon" href="img/evasion.ico"/>
     <link rel="stylesheet" href="css/app2.css"/>
 
-    <!-- Google Analytics -->
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-34808746-1', 'auto');
-     ga('send', 'pageview');
-    </script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PCT28G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCT28G');</script>
+<!-- End Google Tag Manager -->
 
     <!-- AceCounter V.72.2013010701 -->
     <script language='javascript'>
@@ -25,35 +24,57 @@
     <noscript><img src='http://gtp1.acecounter.com:8080/?uid=AM6A38097854060&je=n&' border='0' width='0' height='0' /></noscript>
     <!-- AceCounter End -->
 
+    <script language="javascript">
+    window.fbAsyncInit = function() {FB.init({appId:'697953113640050',status:true,cookie:true,xfbml:true});};
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=697953113640050";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    function facebooklogin() {
+    FB.login(function(response) {
+    if (response.authResponse) {
+       parent.location.replace('/bbs/fbLoginProcess.php?url=/main.php');  // connected
+    } else {
+    	return false;
+    }
+    },{scope: 'public_profile,email'});}
+    </script>
+
 
     <!-- Libraries -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
     <script src="js/parallax.min.js"></script>
 
     <!-- Project js -->
     <script src="js/evasion.js"></script>
-
-    <script language="javascript">
-        window.fbAsyncInit = function() {FB.init({appId:'697953113640050',status:true,cookie:true,xfbml:true});};
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=697953113640050";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        function facebooklogin() {
-        FB.login(function(response) {
-        if (response.authResponse) {
-           parent.location.replace('/bbs/fbLoginProcess.php?url=' + $('#loginForm input[name=url]').val());  // connected
-        } else {
-        	return false;
-        }
-        },{scope: 'public_profile,email'});}
+    <script>
+    
+    !function(t){function e(){var e,i,n={height:a.innerHeight,width:a.innerWidth};return n.height||(e=r.compatMode,(e||!t.support.boxModel)&&(i="CSS1Compat"===e?f:r.body,n={height:i.clientHeight,width:i.clientWidth})),n}function i(){return{top:a.pageYOffset||f.scrollTop||r.body.scrollTop,left:a.pageXOffset||f.scrollLeft||r.body.scrollLeft}}function n(){var n,l=t(),r=0;if(t.each(d,function(t,e){var i=e.data.selector,n=e.$element;l=l.add(i?n.find(i):n)}),n=l.length)for(o=o||e(),h=h||i();n>r;r++)if(t.contains(f,l[r])){var a,c,p,s=t(l[r]),u={height:s.height(),width:s.width()},g=s.offset(),v=s.data("inview");if(!h||!o)return;g.top+u.height>h.top&&g.top<h.top+o.height&&g.left+u.width>h.left&&g.left<h.left+o.width?(a=h.left>g.left?"right":h.left+o.width<g.left+u.width?"left":"both",c=h.top>g.top?"bottom":h.top+o.height<g.top+u.height?"top":"both",p=a+"-"+c,v&&v===p||s.data("inview",p).trigger("inview",[!0,a,c])):v&&s.data("inview",!1).trigger("inview",[!1])}}var o,h,l,d={},r=document,a=window,f=r.documentElement,c=t.expando;t.event.special.inview={add:function(e){d[e.guid+"-"+this[c]]={data:e,$element:t(this)},l||t.isEmptyObject(d)||(l=setInterval(n,250))},remove:function(e){try{delete d[e.guid+"-"+this[c]]}catch(i){}t.isEmptyObject(d)&&(clearInterval(l),l=null)}},t(a).bind("scroll resize scrollstop",function(){o=h=null}),!f.addEventListener&&f.attachEvent&&f.attachEvent("onfocusin",function(){h=null})}(jQuery);
+    
+    $('#aboutSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'aboutSection');
+    });
+    $('#recommendSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'recommendSection');
+    });
+    $('#eventSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'eventSection');
+    });
+    $('#membersSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'membersSection');
+    });
+    $('#footerSection').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'footerSection');
+    });
+    $('#loginPopup').on('inview', function() {
+      ga('send', 'event', '/', 'displayed', 'loginPopup');
+    });
     </script>
     <script>
     window.addEventListener("load", function(){
@@ -79,7 +100,7 @@
             </a>
 
             <div class="login">
-                <a href="/main.php" class="js-login-btn btn btn_small" onmousedown="ga('send', 'event', '/', 'click', 'loginBtn');">로그인</a>
+                <a href="#" class="js-login-btn btn btn_small" onmousedown="ga('send', 'event', '/', 'click', 'loginBtn');">로그인</a>
             </div>
         </div>
         <div class="header__bg js-header-bg"></div>
@@ -90,9 +111,9 @@
              data-autoplay="7000" 
              data-transition="crossfade"
              data-arrows="false">
+            <img src="img/c_1.jpg" alt=""/>
+            <img src="img/bg_a_1.jpg" alt=""/>
             <img src="img/hyatt_danang-min.jpg" alt="hyattregency"/>
-            <img src="img/cambrian-min.jpg" alt="cambrian"/>
-            <img src="img/siam-min.jpg" alt="siam"/>
         </div>
     </div>
 
@@ -105,8 +126,8 @@
         </div>
 
         <div class="actions">
-            <a href="https://www.evasion.co.kr/bbs/join_form.html?" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_top');" class="btn btn_pink">무료 회원 가입</a>
-            <a onclick="facebooklogin(); return false;" class="btn btn_gray" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_top');" href="#">페이스북으로 가입</a>
+            <a href="/bbs/join_form.html?" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_top');" class="btn btn_pink">무료 회원 가입</a>
+            <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_top'); return false;" href="#" class="btn btn_gray">페이스북으로 가입</a>
         </div>
     </div>
 
@@ -185,7 +206,7 @@
                             <p class="item__name">하얏트 리젠시 다낭 리조트 & 스파</p>
                             <p class="item__where">베트남, 다낭</p>
                             <p class="item__about">
-                                Hyatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
+                                Hayatt Regency Danang Resort & Spa｜ VIETNAM, DANANG
                             </p>
                             <p class="item__details">
                                 객실에서 펼쳐지는 논눅 비치, 마블 마운틴의 파노라마 뷰
@@ -376,8 +397,8 @@
 
                 <div class="evasion__actions">
                     <div class="actions">
-                        <a href="https://www.evasion.co.kr/bbs/join_form.html?" class="btn btn_pink" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_bottom');">무료 회원 가입</a>
-                        <a onclick="facebooklogin(); return false;" href="#" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_bottom');" class="btn btn_gray">페이스북으로 가입</a>
+                        <a href="/bbs/join_form.html?" class="btn btn_pink" onmousedown="ga('send', 'event', '/', 'click', 'SignupBtn_bottom');">무료 회원 가입</a>
+                        <a onclick="alert('현재 페이스북 연동 작업 점검 중으로 <페이스북 회원가입> 서비스가 잠정 중단 되었습니다. \n 빠른 시일 내에 처리하여 이용하실 수 있도록 하겠습니다.');location.href='https://www.evasion.co.kr/bbs/join_form.html'" style="cursor:pointer;cursor:hand;" onmousedown="ga('send', 'event', '/', 'click', 'SignupWithFbBtn_bottom');" class="btn btn_gray">페이스북으로 가입</a>
                     </div>
                 </div>
             </div><!-- .container -->
@@ -498,8 +519,8 @@
                 <img src="img/evasion-logo-dark.png" alt="ÉVASION"/>
             </span>
 
-            <form id="loginForm" action="/bbs/login_checkn.php" class="login-form" method="post" target="_parent">
-                <input type="hidden" name="url" value="/main.php" />
+            <form action="https://www.evasion.co.kr/bbs/login_checkn.php" class="login-form" method="post" target="_parent">
+                <input type="hidden" name="url" value="" />
                 <div class="input">
                     <input type="email"
                            name="mb_id"
@@ -517,7 +538,7 @@
 
                 <div class="login-form__opts">
                     <label class="login-form__remember">
-                        <input type="checkbox" id="auto_login" name="auto_login" value="1" onclick="if (this.checked) { if (confirm('자동로그인을 사용하시면 6개월간 아이디와 패스워드를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?')) { this.checked = true; } else { this.checked = false; } }" />
+                        <input type="checkbox" name="auto_login"/>
                         <span>로그인 상태 유지</span>
                     </label>
                     
