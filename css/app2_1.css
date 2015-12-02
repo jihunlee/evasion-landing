@@ -95,7 +95,10 @@ strong{font-weight:700}@-webkit-keyframes carousel-background{0%,895px;{backgrou
 .logo_top-null{padding-top:0}
 .login{top:25px;right:30px;z-index:3}
 .btn,.more__arrow,.or-separator__text,.parallax-box{position:relative}
-.intro{margin:225px 100px 0}@media (max-width:1024px){.intro{margin:150px 100px 0}}
+.intro{margin:100px 100px 0}
+@media (max-width:1024px){
+    .intro{margin:70px 100px 0}
+}
 .actions{margin:20px 0}
 .actions .btn{margin:0px 5px}
 .text{margin:5px 0;font:16px/1.2 'Nanum Barun Gothic',Tahoma,Verdana,sans-serif;color:#676767}
@@ -220,7 +223,7 @@ strong{font-weight:700}@-webkit-keyframes carousel-background{0%,895px;{backgrou
 
 @media (max-width:810px){
     .box__col{width:100%}
-    .welcome{top:15px; height:30%}
+    .welcome{top:15px;}
     .title__row{font-size:20px;}
     .actions{margin:5px 0}
 }
