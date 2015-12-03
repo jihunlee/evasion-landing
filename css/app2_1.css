@@ -96,9 +96,7 @@ strong{font-weight:700}@-webkit-keyframes carousel-background{0%,895px;{backgrou
 .login{top:25px;right:30px;z-index:3}
 .btn,.more__arrow,.or-separator__text,.parallax-box{position:relative}
 .intro{margin:100px 100px 0}
-@media (max-width:1024px){
-    .intro{margin:70px 100px 0}
-}
+
 .actions{margin:20px 0}
 .actions .btn{margin:0px 5px}
 .text{margin:5px 0;font:16px/1.2 'Nanum Barun Gothic',Tahoma,Verdana,sans-serif;color:#676767}
@@ -202,6 +200,22 @@ strong{font-weight:700}@-webkit-keyframes carousel-background{0%,895px;{backgrou
 .event__details{font-size:14px; line-height: 28px; text-align: left; margin:0 0 20px 0}
 .event__name{margin: 15px 0; text-align: left; font-family: 'nanum-barun-gothic-ultralight'; font-size:24px; font-weight:200;}
 .event__more{padding:15px 0 20px 0 ;text-align: left; border-top:1px solid #eee; border-bottom: 2px solid #eee; margin-bottom: 20px;}
+
+@media (min-width:1600px){
+    .intro{margin:200px 100px 0}
+}
+
+@media (max-width:1600px){
+    .intro{margin:130px 100px 0}
+}
+
+@media (max-width:1400px){
+    .intro{margin:100px 100px 0}
+}
+
+@media (max-width:1200px){
+    .intro{margin:70px 100px 0}
+}
 
 @media (max-width:980px){
     .item,.item__about,.item__details,.item__more,.item__name,.item__where{text-align:center}
